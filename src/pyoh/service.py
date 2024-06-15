@@ -1,10 +1,11 @@
 from .recorder import Recorder
+from .mock_bank import MockBank
 
 class Service:
     recorder: Recorder
 
-    def __init__(self):
-        self.recorder = Recorder()
+    def __init__(self, bank: MockBank):
+        self.recorder = Recorder(bank)
 
     def run(self):
         while True:
