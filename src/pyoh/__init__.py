@@ -1,3 +1,7 @@
+from .service import Service
+
 def main() -> int:
-    print("Hello from pyoh!")
+    s = Service()
+    print("start")
+    s.run()
     return 0
